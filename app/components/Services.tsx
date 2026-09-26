@@ -49,7 +49,7 @@ const services = [
   },
   {
     title: "Cross-Country Hauling",
-    desc: "Long-haul lanes managed end-to-end with proactive tracking across every state line.",
+    desc: "Long-haul lanes managed end-to-end with proactive tracking across provincial and state lines.",
     icon: (
       <path
         strokeLinecap="round"

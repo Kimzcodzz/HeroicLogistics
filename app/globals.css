@@ -61,3 +61,55 @@ body {
 .diagonal-cut-top {
   clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
 }
+
+.hero-freight-photo {
+  position: absolute;
+  inset: 0;
+  background:
+    url("/freight-truck.jpg") center / cover;
+  opacity: 0.85;
+}
+
+.hero-freight-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(6 15 34 / 96%) 0%, rgb(6 15 34 / 84%) 45%, rgb(6 15 34 / 42%) 100%);
+}
+
+.hero-freight-brand {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  bottom: 10%;
+  width: min(25vw, 350px);
+  min-width: 185px;
+  opacity: 0.57;
+  mix-blend-mode: multiply;
+  transform: perspective(700px) rotateY(-14deg) skewY(-3deg) rotate(-2deg);
+  transform-origin: right center;
+}
+
+.hero-freight-brand-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(0.78) saturate(0.7) contrast(0.78) blur(0.2px);
+}
+
+@media (max-width: 639px) {
+  .hero-freight-photo {
+    background-position: 72% center;
+  }
+
+  .hero-freight-overlay {
+    background: linear-gradient(180deg, rgb(6 15 34 / 82%) 0%, rgb(6 15 34 / 88%) 58%, rgb(6 15 34 / 96%) 100%);
+  }
+
+  .hero-freight-brand {
+    right: 8%;
+    bottom: 18%;
+    width: 36vw;
+    min-width: 0;
+    transform: perspective(500px) rotateY(-12deg) skewY(-3deg) rotate(-2deg);
+  }
+}

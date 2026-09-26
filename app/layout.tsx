@@ -1,37 +1,78 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Heroic Logistics | Fidelity Drives Our Efficiency",
-  description:
-    "Heroic Logistics delivers dependable full truckload, LTL, and expedited freight solutions nationwide. Vetted carriers, real-time tracking, and 24/7 dispatch.",
-  icons: {
-    icon: "/herologobluerecreation.png",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Hero() {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    <section
+      id="top"
+      className="diagonal-cut relative overflow-hidden bg-navy-950 pb-28 pt-20 text-white"
     >
-      <body className="min-h-full flex flex-col bg-white text-navy-900">{children}</body>
-    </html>
+      <div
+        className="hero-freight-photo"
+        role="img"
+        aria-label="Freight truck travelling on a highway"
+      />
+
+      <div className="hero-freight-overlay" />
+
+      <div className="relative mx-auto flex max-w-6xl flex-col items-start px-6">
+        <div className="w-full">
+          <div>
+            <span className="rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-gold-400">
+              Based in Canada. Built for North America.
+            </span>
+
+            <h1 className="mt-6 max-w-2xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              Freight moved with{" "}
+              <span className="bg-gradient-to-r from-gold-400 to-accent-400 bg-clip-text text-transparent">
+                heroic reliability
+              </span>
+              , across Canada and the U.S.
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+              From Canadian provinces to American destinations, Heroic Logistics
+              moves your freight with real-time visibility and a dispatch team
+              that keeps every lane moving.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/quote"
+                className="rounded-full bg-accent-500 px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent-500/30 transition-transform hover:-translate-y-0.5 hover:bg-accent-400"
+              >
+                Get a Quote
+              </a>
+
+              <a
+                href="#services"
+                className="rounded-full border border-white/25 px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-gold-400 hover:text-gold-400"
+              >
+                Explore Services
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Animated route line */}
+        <div className="route-line mt-14 h-1 w-full max-w-2xl rounded-full opacity-80" />
+
+        <dl className="mt-10 grid w-full max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
+          {[
+            ["500+", "Loads / Month"],
+            ["Canada + U.S.", "Coverage"],
+            ["99.2%", "On-Time Rate"],
+            ["24/7", "Live Dispatch"],
+          ].map(([stat, label]) => (
+            <div key={label}>
+              <dt className="text-2xl font-black text-gold-400 sm:text-3xl">
+                {stat}
+              </dt>
+
+              <dd className="mt-1 text-xs uppercase tracking-wide text-white/60">
+                {label}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
   );
 }

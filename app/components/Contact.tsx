@@ -7,11 +7,11 @@ export default function Contact() {
             Get In Touch
           </span>
           <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-            Ready to move your freight?
+            Need to reach our team?
           </h2>
           <p className="mt-4 max-w-md text-white/70">
-            Send us your shipment details and a Heroic Logistics dispatcher
-            will follow up with a quote &mdash; usually within the hour.
+            Questions about an existing shipment, partnership, or service? Send
+            a message and a member of our team will get back to you.
           </p>
 
           <div className="mt-8 space-y-4 text-sm">
@@ -32,7 +32,7 @@ export default function Contact() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 21s-7.5-6.19-7.5-11.25a7.5 7.5 0 1 1 15 0C19.5 14.81 12 21 12 21Z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 12a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" />
               </svg>
-              Serving all 48 contiguous states
+              Based in Canada, serving Canada and the U.S.
             </div>
           </div>
         </div>
@@ -60,27 +60,28 @@ export default function Contact() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <input
-              name="Origin"
-              placeholder="Pickup city / state"
+              name="Company"
+              placeholder="Company name"
               className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
             />
             <input
-              name="Destination"
-              placeholder="Delivery city / state"
+              name="Phone"
+              type="tel"
+              placeholder="Phone number"
               className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
             />
           </div>
           <textarea
             name="Details"
             rows={4}
-            placeholder="Freight details (weight, dimensions, timeline...)"
+            placeholder="How can we help?"
             className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
           />
           <button
             type="submit"
             className="rounded-full bg-accent-500 px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-accent-400"
           >
-            Send Request
+            Send Message
           </button>
         </form>
       </div>

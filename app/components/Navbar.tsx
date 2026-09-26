@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#process", label: "How It Works" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why-us", label: "Why Us" },
+  { href: "/#process", label: "How It Works" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-800/10 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <a href="#top" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <Image
             src="/herologobluerecreation.png"
             alt="Heroic Logistics"
@@ -38,7 +38,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/quote"
             className="rounded-full bg-navy-900 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-accent-500"
           >
             Get a Quote
@@ -69,7 +69,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/quote"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-full bg-navy-900 px-5 py-2.5 text-center text-sm font-bold uppercase tracking-wide text-white"
           >
