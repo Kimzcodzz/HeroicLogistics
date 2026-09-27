@@ -19,13 +19,13 @@ export default function Contact() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5 flex-none">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a1.5 1.5 0 0 0 1.5-1.5v-2.29a1.5 1.5 0 0 0-1.216-1.474l-3.13-.626a1.5 1.5 0 0 0-1.53.68l-.69 1.15a12.21 12.21 0 0 1-5.66-5.66l1.15-.69a1.5 1.5 0 0 0 .68-1.53l-.626-3.13A1.5 1.5 0 0 0 6.54 5.25H4.25a1.5 1.5 0 0 0-1.5 1.5Z" />
               </svg>
-              (800) 555-0123
+              (778)991-8788
             </a>
             <a href="mailto:dispatch@heroiclogistics.com" className="flex items-center gap-3 text-white/80 hover:text-gold-400">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5 flex-none">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 12 13.5l9.75-6.75M3.75 5.25h16.5A1.5 1.5 0 0 1 21.75 6.75v10.5a1.5 1.5 0 0 1-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75a1.5 1.5 0 0 1 1.5-1.5Z" />
               </svg>
-              dispatch@heroiclogistics.com
+              info@heroiclogistics.co
             </a>
             <div className="flex items-center gap-3 text-white/80">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5 flex-none">
@@ -88,3 +88,4 @@ export default function Contact() {
     </section>
   );
 }
+
