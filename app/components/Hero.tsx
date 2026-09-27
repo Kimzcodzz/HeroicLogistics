@@ -30,8 +30,9 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex min-h-[640px] max-w-6xl flex-col items-start justify-center px-6">
         <div className="w-full">
           <div>
-            <span className="rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-gold-400 backdrop-blur-sm">
-              Based in Canada. Built for North America.
+            <span className="inline-flex max-w-full flex-col items-start gap-1 rounded-lg border border-gold-500/40 bg-gold-500/10 px-3 py-2 text-[10px] font-bold uppercase leading-tight tracking-[0.12em] text-gold-400 backdrop-blur-sm sm:flex-row sm:items-center sm:gap-2 sm:rounded-full sm:px-4 sm:py-1 sm:text-xs sm:tracking-[0.2em]">
+              <span>Based in Canada.</span>
+              <span>Built for North America.</span>
             </span>
 
             <h1 className="mt-6 max-w-2xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">

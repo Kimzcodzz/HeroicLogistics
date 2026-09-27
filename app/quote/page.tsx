@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { submitQuote } from "../actions";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-export const metadata = {
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/quote",
+  },
   title: "Request a Freight Quote | Heroic Logistics",
   description:
     "Request a freight quote for shipments across Canada and the United States.",
