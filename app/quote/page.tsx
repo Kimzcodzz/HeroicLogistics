@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { submitQuote } from "../actions";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -77,11 +78,15 @@ export default function QuotePage() {
         {/* Quote Form */}
         <section className="bg-white py-14 sm:py-20">
           <form
-            action="mailto:dispatch@heroiclogistics.com"
-            method="POST"
-            encType="text/plain"
+            action={submitQuote}
             className="mx-auto grid max-w-3xl gap-6 px-6"
           >
+            <div className="sr-only" aria-hidden="true">
+              <label>
+                Leave this field blank
+                <input name="website" tabIndex={-1} autoComplete="off" />
+              </label>
+            </div>
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="grid gap-2 text-sm font-bold text-navy-900">
                 Full name

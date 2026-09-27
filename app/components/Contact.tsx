@@ -1,3 +1,5 @@
+import { submitContactMessage } from "../actions";
+
 export default function Contact() {
   return (
     <section id="contact" className="diagonal-cut-top bg-navy-950 pb-24 pt-28 text-white">
@@ -21,7 +23,7 @@ export default function Contact() {
               </svg>
               (778)991-8788
             </a>
-            <a href="mailto:dispatch@heroiclogistics.com" className="flex items-center gap-3 text-white/80 hover:text-gold-400">
+            <a href="mailto:info@heroiclogistics.co" className="flex items-center gap-3 text-white/80 hover:text-gold-400">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5 flex-none">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 12 13.5l9.75-6.75M3.75 5.25h16.5A1.5 1.5 0 0 1 21.75 6.75v10.5a1.5 1.5 0 0 1-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75a1.5 1.5 0 0 1 1.5-1.5Z" />
               </svg>
@@ -38,11 +40,15 @@ export default function Contact() {
         </div>
 
         <form
-          action="mailto:dispatch@heroiclogistics.com"
-          method="POST"
-          encType="text/plain"
+          action={submitContactMessage}
           className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-7"
         >
+          <div className="sr-only" aria-hidden="true">
+            <label>
+              Leave this field blank
+              <input name="website" tabIndex={-1} autoComplete="off" />
+            </label>
+          </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <input
               required

@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Form Submissions
+
+Quote requests are sent to `dispatch@heroiclogistics.co` and contact messages to `info@heroiclogistics.co` through Resend. Set these variables in `.env.local` before testing submissions:
+
+```env
+RESEND_API_KEY=re_your_api_key
+RESEND_FROM_EMAIL=Heroic Logistics <quotes@your-verified-domain.com>
+```
+
+The sender address must belong to a domain verified in Resend. The confirmation page is shown only after Resend accepts the email; missing configuration or a send error displays a retry option instead.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
